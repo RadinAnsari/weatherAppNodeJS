@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.get('/weather', async (req, res) => {
     let city = req.query.city;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+    let url = `https://api.openweathermap.org/data/3.0/onecall/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
     try {
         let response = await axios.get(url);
